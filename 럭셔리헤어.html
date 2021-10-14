@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>럭셔리 헤어</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        margin-left: auto;
+        margin-right: auto;
+        width: 980px;
+
+        height: 460px;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+
+var title = "럭셔리 헤어";
+
+pannellum.viewer('panorama', {   
+    "default": {
+        "type":"equirectangular",
+        "firstScene": "circle",
+        "author": "충북 청주시 서원구 신화로 45 태극빌딩 105호",
+        "sceneFadeDuration": 1000
+    },
+// 만약 버튼을 두개 이상 하고싶다면 hotspots []안에 배열처럼 {}추가하기 쉼표(,) 필수 
+    "scenes": {
+
+        "circle": {
+            "title": title, // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 0,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/bYmdSeL.jpg",  //첫방 사진 링크 
+            "hotSpots": [
+            
+            ]
+        }
+    }
+});
+</script>
+
+
+</body>
+</html>
